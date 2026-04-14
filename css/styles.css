@@ -1997,3 +1997,72 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   #cursor-glow, .tap-burst { display: none !important; }
 }
+
+/* =====================================================
+   MOBILE IMAGE LAYOUT — Program Pages
+   ===================================================== */
+
+/* Mobile image strip — hidden on desktop */
+.mobile-image-strip {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Stack two-column text+image layouts into a single column */
+  .two-col-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  /* Text div fills full width */
+  .two-col-section > div:first-child {
+    width: 100% !important;
+  }
+
+  /* Image div: full width, fixed height, cover crop */
+  .two-col-section > div:last-child {
+    width: 100% !important;
+  }
+
+  .two-col-section > div:last-child img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 260px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 10px !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  /* Show mobile horizontal image strip */
+  .mobile-image-strip {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    scrollbar-width: none;
+    background: #111;
+  }
+
+  .mobile-image-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-image-strip img {
+    width: 260px !important;
+    min-width: 260px !important;
+    height: 180px !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 10px !important;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    margin: 0 !important;
+    display: block !important;
+  }
+}
