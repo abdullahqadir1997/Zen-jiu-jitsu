@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Free Class | ZEN Brazilian Jiu-Jitsu Coopersburg PA</title>
+  <meta name="description" content="Book your free intro class at ZEN Brazilian Jiu-Jitsu in Coopersburg, PA. Choose a date and time that works for you — no experience needed.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://www.zenjiujitsucoopersburg.com/book-a-class.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Booking Hero ── */
+    .booking-hero {
+      background: #111111;
+      padding: calc(var(--nav-height) + 90px) 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .booking-hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 500px;
+      background: radial-gradient(ellipse at center, rgba(204,0,0,0.13) 0%, transparent 65%);
+      animation: heroGlow 3s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes heroGlow {
+      from { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+      to   { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+    }
+    .booking-hero-content { position: relative; z-index: 1; }
+
+    /* ── Checkmark SVG ── */
+    .check-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      display: block;
+      overflow: visible;
+    }
+    .check-icon circle {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: drawCheck 0.8s ease forwards 0.2s;
+    }
+    .check-icon path {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: drawCheck 0.6s ease forwards 0.7s;
+    }
+    @keyframes drawCheck {
+      from { stroke-dashoffset: 200; }
+      to   { stroke-dashoffset: 0; }
+    }
+
+    /* ── Headline / subheadline ── */
+    .booking-headline {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.7s ease forwards 0.4s;
+    }
+    .booking-subheadline {
+      font-size: 1.05rem;
+      color: #aaaaaa;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.7s ease forwards 0.6s;
+    }
+
+    /* ── Program badge ── */
+    .program-badge {
+      display: inline-block;
+      background: #CC0000;
+      color: #ffffff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+      opacity: 0;
+      transform: scale(0.85);
+      animation: popIn 0.5s ease forwards 0.9s;
+    }
+
+    /* ── Booking calendar section ── */
+    .booking-section {
+      background: #111111;
+      padding: 60px 0;
+    }
+    .booking-section-title {
+      text-align: center;
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+    }
+    .booking-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      padding: 32px;
+      max-width: 860px;
+      margin: 0 auto;
+      min-height: 420px;
+    }
+    .booking-card iframe {
+      display: block;
+      width: 100%;
+      border: none;
+      min-height: 600px;
+    }
+
+    /* ── Loading spinner ── */
+    .booking-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(204,0,0,0.2);
+      border-top-color: #CC0000;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 60px auto;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── What Happens Next ── */
+    .next-steps-section {
+      background: #0d0d0d;
+      padding: 70px 0;
+      border-top: 1px solid #1e1e1e;
+    }
+    .next-steps-title {
+      text-align: center;
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      margin-bottom: 40px;
+    }
+    .next-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .next-step {
+      text-align: center;
+      padding: 30px 22px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    .next-step:nth-child(1) { animation: fadeSlideUp 0.6s ease forwards 1.2s; }
+    .next-step:nth-child(2) { animation: fadeSlideUp 0.6s ease forwards 1.4s; }
+    .next-step:nth-child(3) { animation: fadeSlideUp 0.6s ease forwards 1.6s; }
+    .next-step-icon { font-size: 2.5rem; margin-bottom: 14px; display: block; }
+    .next-step h3 {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .next-step p { font-size: 0.88rem; color: #888888; line-height: 1.65; margin: 0; }
+
+    /* ── Contact reminder ── */
+    .booking-contact-reminder {
+      text-align: center;
+      padding: 30px 20px 60px;
+      background: #0d0d0d;
+    }
+    .booking-contact-reminder p { font-size: 0.88rem; color: #666666; margin: 0; }
+    .booking-contact-reminder a { color: #CC0000; text-decoration: none; transition: color 0.2s; }
+    .booking-contact-reminder a:hover { color: #ff2020; }
+
+    /* ── Keyframes ── */
+    @keyframes fadeSlideUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes popIn       { to { opacity: 1; transform: scale(1); } }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .next-steps-grid { grid-template-columns: 1fr; gap: 16px; }
+      .booking-card { padding: 16px; }
+      .booking-hero { padding: calc(var(--nav-height) + 60px) 16px 50px; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .booking-headline,
+      .booking-subheadline,
+      .program-badge,
+      .next-step { opacity: 1 !important; transform: none !important; }
+      .check-icon circle,
+      .check-icon path { stroke-dashoffset: 0 !important; }
+      .booking-hero-glow { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="ZEN Brazilian Jiu-Jitsu Home">
+      <div class="nav-logo-wrap">
+        <img src="Logos/Zen%20Logo%20White.webp" alt="ZEN Brazilian Jiu-Jitsu" class="nav-logo-img">
+      </div>
+    </a>
+    <div class="nav-links" role="navigation">
+      <a href="index.html">Home</a>
+      <a href="instructors.html">Instructors</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">PROGRAMS <svg class="nav-chevron" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="adult-bjj.html" role="menuitem">Adult Jiu-Jitsu</a>
+          <a href="kids-bjj.html" role="menuitem">Kids Jiu-Jitsu</a>
+          <a href="judo.html" role="menuitem">Judo</a>
+        </div>
+      </div>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+      <button class="btn nav-cta" data-modal aria-label="Try a free class">TRY A FREE CLASS</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="drawerOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:998;display:none;"></div>
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="instructors.html">Instructors</a>
+  <div class="drawer-programs">
+    <button class="drawer-programs-toggle" aria-expanded="false">PROGRAMS <svg class="drawer-chevron" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="drawer-programs-sub" hidden>
+      <a href="adult-bjj.html">Adult Jiu-Jitsu</a>
+      <a href="kids-bjj.html">Kids Jiu-Jitsu</a>
+      <a href="judo.html">Judo</a>
+    </div>
+  </div>
+  <a href="schedule.html">Schedule</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+  <a class="drawer-cta" href="#" data-modal>TRY A FREE CLASS</a>
+</nav>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
+    <div class="modal-logo">
+      <div style="width:64px;height:64px;margin:0 auto 10px;">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#CC0000" stroke-width="2" fill="none"/>
+          <text x="32" y="44" text-anchor="middle" font-family="serif" font-size="32" fill="white">禅</text>
+          <rect x="12" y="54" width="40" height="4" fill="#CC0000" rx="2"/>
+        </svg>
+      </div>
+      <h3 id="modalTitle">CLAIM YOUR FREE CLASS</h3>
+      <p>No experience needed. All ages &amp; levels welcome.</p>
+    </div>
+    <form class="modal-form" id="modalForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name <span class="required-star">*</span></label>
+          <input type="text" id="modalFirst" name="first_name" required placeholder="First Name" autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label>Last Name <span class="required-star">*</span></label>
+          <input type="text" id="modalLast" name="last_name" required placeholder="Last Name" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone <span class="required-star">*</span></label>
+        <input type="tel" id="modalPhone" name="phone" required placeholder="Phone" autocomplete="tel">
+      </div>
+      <div class="form-group">
+        <label>Email <span class="required-star">*</span></label>
+        <input type="email" id="modalEmail" name="email" required placeholder="Email" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="modalProgram">What Program Are You Interested In? <span class="required-star">*</span></label>
+        <select id="modalProgram" name="program" required>
+          <option value="" disabled selected>Select a Program</option>
+          <option value="adult-bjj">Adult BJJ Program (Age 18 and above)</option>
+          <option value="kids-bjj">Kids BJJ Program (Age 5 and above)</option>
+          <option value="judo">Judo BJJ Program (All Levels)</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-red btn-pulse">Try A Free Class Now</button>
+      <div class="consent-item">
+        <input type="checkbox" id="sms-consent" name="sms_consent" value="yes">
+        <label for="sms-consent">I Consent to Receive SMS Notifications and Alerts from W&amp;J BJJ Academy LLC. Frequency varies. Message &amp; data rates may apply. Text HELP to 610-827-5929 for assistance. You can reply STOP to unsubscribe.</label>
+      </div>
+      <div class="consent-item">
+        <input type="checkbox" id="marketing-consent" name="marketing_consent" value="yes">
+        <label for="marketing-consent">I agree to receive Marketing and Promotional messages from W&amp;J BJJ Academy LLC at the phone number provided above. This agreement isn't a condition of any purchase. Msg &amp; data rates may apply, message frequencies vary. Text HELP to 610-827-5929 for assistance, reply STOP or OUT to opt out or to unsubscribe at any time.</label>
+      </div>
+      <p class="popup-privacy-link">
+        By submitting this form, you agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="booking-hero" aria-label="Booking confirmation header">
+  <div class="booking-hero-glow" aria-hidden="true"></div>
+  <div class="container booking-hero-content">
+
+    <!-- Animated checkmark -->
+    <svg class="check-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="40" cy="40" r="31" stroke="#CC0000" stroke-width="3" fill="none"/>
+      <path d="M23 40 L35 53 L57 27" stroke="#CC0000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+
+    <h1 class="booking-headline">YOU'RE ONE STEP AWAY!</h1>
+    <p class="booking-subheadline">Select a date and time below to book your free intro class.</p>
+    <span class="program-badge" id="program-badge">Adult BJJ — Ages 18 and Above</span>
+  </div>
+</section>
+
+<!-- BOOKING CALENDAR -->
+<section class="booking-section" aria-label="Booking calendar">
+  <div class="container">
+    <h2 class="booking-section-title">Choose Your Date &amp; Time</h2>
+    <div class="booking-card">
+      <div id="booking-widget" aria-live="polite" aria-label="Booking calendar widget">
+        <div class="booking-spinner" role="status" aria-label="Loading calendar..."></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next-steps-section" aria-labelledby="next-steps-heading">
+  <div class="container">
+    <h2 class="next-steps-title" id="next-steps-heading">What Happens Next</h2>
+    <div class="next-steps-grid">
+      <div class="next-step">
+        <span class="next-step-icon" aria-hidden="true">📅</span>
+        <h3>Book Your Spot</h3>
+        <p>Pick a date and time that works for you.</p>
+      </div>
+      <div class="next-step">
+        <span class="next-step-icon" aria-hidden="true">📲</span>
+        <h3>Get Confirmation</h3>
+        <p>You'll receive a confirmation text and email.</p>
+      </div>
+      <div class="next-step">
+        <span class="next-step-icon" aria-hidden="true">🥋</span>
+        <h3>Show Up &amp; Train</h3>
+        <p>Just show up — no experience or equipment needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT REMINDER -->
+<div class="booking-contact-reminder">
+  <p>Have questions? Call us at <a href="tel:+16108275929">1 (610) 827-5929</a> or email <a href="mailto:whsieh@zenjiujitsucoopersburg.com">whsieh@zenjiujitsucoopersburg.com</a></p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner" >
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="ZEN Brazilian Jiu-Jitsu Home">
+          <img src="Logos/Zen%20Logo%20White.webp" alt="ZEN Brazilian Jiu-Jitsu" class="footer-logo-img">
+        </a>
+        <p>A premier Gi &amp; No-Gi Jiu-Jitsu academy in Coopersburg, PA. Classes for all ages and skill levels in the Lehigh Valley.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/ZenBJJCoopersburg" class="social-circle" target="_blank" rel="noopener noreferrer" aria-label="ZEN BJJ on Facebook">
+            <svg viewBox="0 0 24 24" style="fill:white;width:20px;height:20px" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/zen_brazilian_jiujitsu/" class="social-circle" target="_blank" rel="noopener noreferrer" aria-label="ZEN BJJ on Instagram">
+            <svg viewBox="0 0 24 24" style="fill:none;stroke:white;stroke-width:2;width:20px;height:20px" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instructors.html">Instructors</a></li>
+          <li><a href="adult-bjj.html">Adult Jiu-Jitsu</a></li>
+          <li><a href="kids-bjj.html">Kids Jiu-Jitsu</a></li>
+          <li><a href="judo.html">Judo</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.24-1.24a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+16108275929">1 (610) 827-5929</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:whsieh@zenjiujitsucoopersburg.com">whsieh@zenjiujitsucoopersburg.com</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <address style="font-style:normal;">7001 Route 309 North, Store #15<br>Coopersburg, PA 18036</address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>Copyright 2026 – ZEN Brazilian Jiu-Jitsu. All rights reserved.</p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="mobile-bar" aria-label="Mobile quick actions">
+  <a href="tel:+16108275929" class="call-btn" aria-label="Call ZEN BJJ at 610-827-5929">
+    <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:#CC0000;fill:none;stroke-width:2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.24-1.24a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Us
+  </a>
+  <div class="free-btn" id="mobileFreeCta" role="button" tabindex="0" aria-label="Try a free class">TRY FREE CLASS</div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/cursor.js" defer></script>
+
+<!-- Booking widget injection -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var params  = new URLSearchParams(window.location.search);
+  var program = params.get('program') || 'adult-bjj';
+  var container = document.getElementById('booking-widget');
+
+  var widgets = {
+    'adult-bjj': { src: 'https://link.conversionbees.com/widget/booking/ljQ4OqP54avSh8fsYag7',  id: 'ljQ4OqP54avSh8fsYag7_1776109436247' },
+    'kids-bjj':  { src: 'https://link.conversionbees.com/widget/booking/zyhXrFJt7B4xRhLg9AnP',  id: 'zyhXrFJt7B4xRhLg9AnP_1776109457965' },
+    'judo':      { src: 'https://link.conversionbees.com/widget/booking/TQVyQyYn3ACxzJypb9IX',  id: 'TQVyQyYn3ACxzJypb9IX_1776116384253' }
+  };
+  var badgeLabels = {
+    'adult-bjj': 'Adult BJJ \u2014 Ages 18 and Above',
+    'kids-bjj':  'Kids BJJ \u2014 Ages 5 and Above',
+    'judo':      'Judo Program \u2014 All Levels'
+  };
+
+  // Clamp to known values
+  if (!widgets[program]) program = 'adult-bjj';
+
+  // Update program badge
+  var badge = document.getElementById('program-badge');
+  if (badge) badge.textContent = badgeLabels[program];
+
+  // Inject iframe after spinner delay
+  if (container) {
+    setTimeout(function () {
+      var widget = widgets[program];
+
+      // Build iframe element
+      var iframe = document.createElement('iframe');
+      iframe.src = widget.src;
+      iframe.id  = widget.id;
+      iframe.setAttribute('scrolling', 'no');
+      iframe.setAttribute('title', 'Book a free class at ZEN Brazilian Jiu-Jitsu');
+      iframe.style.cssText = 'width:100%;border:none;overflow:hidden;min-height:600px;display:block;';
+
+      container.innerHTML = '';
+      container.appendChild(iframe);
+
+      // Load ConversionBees embed script (only once)
+      if (!document.getElementById('cb-embed-script')) {
+        var script = document.createElement('script');
+        script.id   = 'cb-embed-script';
+        script.src  = 'https://link.conversionbees.com/js/form_embed.js';
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+      }
+
+      // Fade in
+      container.style.opacity   = '0';
+      container.style.transform = 'translateY(16px)';
+      requestAnimationFrame(function () {
+        container.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        container.style.opacity    = '1';
+        container.style.transform  = 'translateY(0)';
+      });
+    }, 600);
+  }
+});
+</script>
+
+</body>
+</html>

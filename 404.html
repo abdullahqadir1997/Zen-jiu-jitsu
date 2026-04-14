@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | ZEN Brazilian Jiu-Jitsu</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Find your way back to ZEN BJJ.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="ZEN Brazilian Jiu-Jitsu Home">
+      <div class="nav-logo-wrap">
+        <img src="Logos/Zen%20Logo%20White.webp" alt="ZEN Brazilian Jiu-Jitsu" class="nav-logo-img">
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="instructors.html">Instructors</a><a href="adult-bjj.html">Adult Jiu-Jitsu</a><a href="kids-bjj.html">Kids Jiu-Jitsu</a><a href="judo.html">Judo</a><a href="schedule.html">Schedule</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact Us</a>
+      <button class="btn nav-cta" data-modal>TRY A FREE CLASS</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navDrawer"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="drawerOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:998;display:none;"></div>
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
+  <a href="index.html">Home</a><a href="instructors.html">Instructors</a><a href="adult-bjj.html">Adult Jiu-Jitsu</a><a href="kids-bjj.html">Kids Jiu-Jitsu</a><a href="judo.html">Judo</a><a href="schedule.html">Schedule</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact Us</a>
+  <a class="drawer-cta" href="#" data-modal>TRY A FREE CLASS</a>
+</nav>
+
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
+    <div class="modal-logo"><div style="width:64px;height:64px;margin:0 auto 10px;"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="#CC0000" stroke-width="2" fill="none"/><text x="32" y="44" text-anchor="middle" font-family="serif" font-size="32" fill="white">禅</text><rect x="12" y="54" width="40" height="4" fill="#CC0000" rx="2"/></svg></div><h3 id="modalTitle">CLAIM YOUR FREE CLASS</h3><p>No experience needed. All ages &amp; levels welcome.</p></div>
+    <form class="modal-form" id="modalForm" novalidate>
+      <div class="form-row"><div class="form-group"><label for="modalFirst">First Name *</label><input type="text" id="modalFirst" name="first_name" required placeholder="John" autocomplete="given-name"></div><div class="form-group"><label for="modalLast">Last Name *</label><input type="text" id="modalLast" name="last_name" required placeholder="Smith" autocomplete="family-name"></div></div>
+      <div class="form-group"><label for="modalPhone">Phone *</label><input type="tel" id="modalPhone" name="phone" required placeholder="(610) 555-1234" autocomplete="tel"></div>
+      <div class="form-group"><label for="modalEmail">Email *</label><input type="email" id="modalEmail" name="email" required placeholder="you@email.com" autocomplete="email"></div>
+      <div class="form-group"><label for="modalProgram">Program of Interest</label><select id="modalProgram" name="program"><option value="">Select...</option><option value="Adult Jiu-Jitsu">Adult Jiu-Jitsu</option><option value="Kids Jiu-Jitsu">Kids Jiu-Jitsu</option><option value="Judo">Judo</option><option value="Not Sure Yet">Not Sure Yet</option></select></div>
+      <div class="form-group"><label for="modalHear">How Did You Hear About Us?</label><select id="modalHear" name="referral"><option value="">Select...</option><option value="Google Search">Google Search</option><option value="Facebook">Facebook</option><option value="Instagram">Instagram</option><option value="Friend/Family">Friend or Family</option><option value="Drove By">Drove By</option><option value="Other">Other</option></select></div>
+      <button type="submit" class="btn btn-red btn-pulse">CLAIM MY FREE CLASS</button>
+    </form>
+  </div>
+</div>
+
+<main style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--dark);padding:calc(var(--nav-height) + 60px) 20px 80px;">
+  <div>
+    <div style="font-family:var(--font-head);font-size:clamp(6rem,20vw,14rem);line-height:1;color:rgba(204,0,0,0.12);" aria-hidden="true">404</div>
+    <div style="width:60px;height:4px;background:#CC0000;margin:-10px auto 24px;"></div>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px;">PAGE NOT FOUND</h1>
+    <p style="color:#aaa;max-width:480px;margin:0 auto 32px;font-size:1rem;">Looks like you've wandered off the mat. The page you're looking for doesn't exist — but your journey can start right now.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html" class="btn btn-outline-red">← BACK TO HOME</a>
+      <button class="btn btn-red" data-modal>TRY A FREE CLASS</button>
+    </div>
+    <div style="margin-top:40px;">
+      <p style="color:#555;font-size:0.85rem;margin-bottom:14px;">Looking for something specific?</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <a href="adult-bjj.html" style="color:#aaa;font-size:0.85rem;padding:7px 16px;border:1px solid #333;border-radius:20px;transition:0.3s;" onmouseover="this.style.color='#CC0000';this.style.borderColor='#CC0000'" onmouseout="this.style.color='#aaa';this.style.borderColor='#333'">Adult BJJ</a>
+        <a href="kids-bjj.html" style="color:#aaa;font-size:0.85rem;padding:7px 16px;border:1px solid #333;border-radius:20px;transition:0.3s;" onmouseover="this.style.color='#CC0000';this.style.borderColor='#CC0000'" onmouseout="this.style.color='#aaa';this.style.borderColor='#333'">Kids BJJ</a>
+        <a href="judo.html" style="color:#aaa;font-size:0.85rem;padding:7px 16px;border:1px solid #333;border-radius:20px;transition:0.3s;" onmouseover="this.style.color='#CC0000';this.style.borderColor='#CC0000'" onmouseout="this.style.color='#aaa';this.style.borderColor='#333'">Judo</a>
+        <a href="schedule.html" style="color:#aaa;font-size:0.85rem;padding:7px 16px;border:1px solid #333;border-radius:20px;transition:0.3s;" onmouseover="this.style.color='#CC0000';this.style.borderColor='#CC0000'" onmouseout="this.style.color='#aaa';this.style.borderColor='#333'">Schedule</a>
+        <a href="contact.html" style="color:#aaa;font-size:0.85rem;padding:7px 16px;border:1px solid #333;border-radius:20px;transition:0.3s;" onmouseover="this.style.color='#CC0000';this.style.borderColor='#CC0000'" onmouseout="this.style.color='#aaa';this.style.borderColor='#333'">Contact</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><div class="footer-logo"><div style="width:44px;height:44px;flex-shrink:0"><svg viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="21" stroke="#CC0000" stroke-width="1.5" fill="none"/><text x="22" y="30" text-anchor="middle" font-family="serif" font-size="22" fill="white">禅</text><rect x="8" y="37" width="28" height="3" fill="#CC0000" rx="1.5"/></svg></div><div class="wordmark"><span style="color:#CC0000">ZEN</span><br>BRAZILIAN JIU-JITSU</div></div><p>A premier Gi &amp; No-Gi Jiu-Jitsu academy in Coopersburg, PA.</p><div class="footer-social"><a href="https://www.facebook.com/ZenBJJCoopersburg" class="social-circle" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" style="fill:white;width:20px;height:20px"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/zen_brazilian_jiujitsu/" class="social-circle" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" style="fill:none;stroke:white;stroke-width:2;width:20px;height:20px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white"/></svg></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="instructors.html">Instructors</a></li><li><a href="adult-bjj.html">Adult Jiu-Jitsu</a></li><li><a href="kids-bjj.html">Kids Jiu-Jitsu</a></li><li><a href="judo.html">Judo</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><div class="contact-line"><svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.24-1.24a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+16108275929">1 (610) 827-5929</a></div><div class="contact-line"><svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><address style="font-style:normal;">7001 Route 309 North, Store #15<br>Coopersburg, PA 18036</address></div></div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>Copyright 2026 – ZEN Brazilian Jiu-Jitsu. All rights reserved.</p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+<div class="mobile-bar"><a href="tel:+16108275929" class="call-btn" aria-label="Call ZEN BJJ"><svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:#CC0000;fill:none;stroke-width:2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.24-1.24a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Call Us</a><div class="free-btn" id="mobileFreeCta" role="button" tabindex="0">TRY FREE CLASS</div></div>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    AOS.init({ duration: 700, once: true, offset: 60, easing: 'ease-out-cubic' });
+  }
+</script>
+</body>
+</html>

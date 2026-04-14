@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | ZEN Brazilian Jiu-Jitsu Coopersburg PA</title>
+  <meta name="description" content="Read the Privacy Policy for ZEN Brazilian Jiu-Jitsu in Coopersburg, PA. Learn how we collect, use, and protect your personal information.">
+  <link rel="canonical" href="https://www.zenjiujitsucoopersburg.com/privacy-policy.html">
+  <meta property="og:title" content="Privacy Policy | ZEN Brazilian Jiu-Jitsu Coopersburg PA">
+  <meta property="og:description" content="Read the Privacy Policy for ZEN Brazilian Jiu-Jitsu in Coopersburg, PA. Learn how we collect, use, and protect your personal information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.zenjiujitsucoopersburg.com/privacy-policy.html">
+  <meta property="og:image" content="https://www.zenjiujitsucoopersburg.com/images/og-home.jpg">
+  <meta property="og:site_name" content="ZEN Brazilian Jiu-Jitsu">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="ZEN Brazilian Jiu-Jitsu Home">
+      <div class="nav-logo-wrap">
+        <img src="Logos/Zen%20Logo%20White.webp" alt="ZEN Brazilian Jiu-Jitsu" class="nav-logo-img">
+      </div>
+    </a>
+    <div class="nav-links" role="navigation">
+      <a href="index.html">Home</a>
+      <a href="instructors.html">Instructors</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">PROGRAMS <svg class="nav-chevron" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="adult-bjj.html" role="menuitem">Adult Jiu-Jitsu</a>
+          <a href="kids-bjj.html" role="menuitem">Kids Jiu-Jitsu</a>
+          <a href="judo.html" role="menuitem">Judo</a>
+        </div>
+      </div>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+      <button class="btn nav-cta" data-modal aria-label="Try a free class">TRY A FREE CLASS</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="drawerOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:998;display:none;"></div>
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="instructors.html">Instructors</a>
+  <div class="drawer-programs">
+    <button class="drawer-programs-toggle" aria-expanded="false">PROGRAMS <svg class="drawer-chevron" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="drawer-programs-sub" hidden>
+      <a href="adult-bjj.html">Adult Jiu-Jitsu</a>
+      <a href="kids-bjj.html">Kids Jiu-Jitsu</a>
+      <a href="judo.html">Judo</a>
+    </div>
+  </div>
+  <a href="schedule.html">Schedule</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+  <a class="drawer-cta" href="#" data-modal>TRY A FREE CLASS</a>
+</nav>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
+    <div class="modal-logo">
+      <div style="width:64px;height:64px;margin:0 auto 10px;">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#CC0000" stroke-width="2" fill="none"/>
+          <text x="32" y="44" text-anchor="middle" font-family="serif" font-size="32" fill="white">禅</text>
+          <rect x="12" y="54" width="40" height="4" fill="#CC0000" rx="2"/>
+        </svg>
+      </div>
+      <h3 id="modalTitle">CLAIM YOUR FREE CLASS</h3>
+      <p>No experience needed. All ages &amp; levels welcome.</p>
+    </div>
+    <form class="modal-form" id="modalForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name <span class="required-star">*</span></label>
+          <input type="text" id="modalFirst" name="first_name" required placeholder="First Name" autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label>Last Name <span class="required-star">*</span></label>
+          <input type="text" id="modalLast" name="last_name" required placeholder="Last Name" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone <span class="required-star">*</span></label>
+        <input type="tel" id="modalPhone" name="phone" required placeholder="Phone" autocomplete="tel">
+      </div>
+      <div class="form-group">
+        <label>Email <span class="required-star">*</span></label>
+        <input type="email" id="modalEmail" name="email" required placeholder="Email" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="modalProgram">What Program Are You Interested In? <span class="required-star">*</span></label>
+        <select id="modalProgram" name="program" required>
+          <option value="" disabled selected>Select a Program</option>
+          <option value="adult-bjj">Adult BJJ Program (Age 18 and above)</option>
+          <option value="kids-bjj">Kids BJJ Program (Age 5 and above)</option>
+          <option value="judo">Judo BJJ Program (All Levels)</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-red btn-pulse">Try A Free Class Now</button>
+      <div class="consent-item">
+        <input type="checkbox" id="sms-consent" name="sms_consent" value="yes">
+        <label for="sms-consent">I Consent to Receive SMS Notifications and Alerts from W&amp;J BJJ Academy LLC. Frequency varies. Message &amp; data rates may apply. Text HELP to 610-827-5929 for assistance. You can reply STOP to unsubscribe.</label>
+      </div>
+      <div class="consent-item">
+        <input type="checkbox" id="marketing-consent" name="marketing_consent" value="yes">
+        <label for="marketing-consent">I agree to receive Marketing and Promotional messages from W&amp;J BJJ Academy LLC at the phone number provided above. This agreement isn't a condition of any purchase. Msg &amp; data rates may apply, message frequencies vary. Text HELP to 610-827-5929 for assistance, reply STOP or OUT to opt out or to unsubscribe at any time.</label>
+      </div>
+      <p class="popup-privacy-link">
+        By submitting this form, you agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- HERO BANNER -->
+<section style="background:#111111;padding:calc(var(--nav-height) + 60px) 0 50px;border-bottom:3px solid #CC0000;" aria-label="Privacy Policy header">
+  <div class="container" style="max-width:860px;margin:0 auto;padding:0 24px;">
+    <h1 style="font-family:var(--font-head);font-size:clamp(2.5rem,6vw,4rem);color:#ffffff;letter-spacing:0.05em;margin-bottom:10px;">PRIVACY POLICY</h1>
+    <p style="color:#888888;font-size:0.9rem;font-family:var(--font-body);">Effective Date: April 2026</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<main style="background:#111111;padding:60px 0 80px;" aria-label="Privacy Policy content">
+  <div style="max-width:860px;margin:0 auto;padding:0 24px;color:#e0e0e0;font-family:var(--font-body);font-size:15px;line-height:1.8;">
+
+    <p>At Zen Brazilian Jiu-Jitsu, we respect and are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our website and services. By using our website or providing us with your information, you agree to the practices described in this policy.</p>
+
+    <!-- Information We Collect -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">INFORMATION WE COLLECT</h2>
+    <p>We collect the following types of information from you:</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Personal Information:</h3>
+    <p>When you register for classes, sign up for newsletters, or contact us, we may collect personal information such as your name, email address, phone number, and any other information you voluntarily provide.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Payment Information:</h3>
+    <p>If you make a purchase, we collect billing and payment information such as credit card details through secure third-party payment processors. We do not store credit card information on our servers.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Website Usage Data:</h3>
+    <p>We may collect non-personal information about your interaction with our website, including your IP address, browser type, pages viewed, and the date and time of your visit. This data helps us improve our website and provide a better user experience.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Cookies and Tracking Technologies:</h3>
+    <p>We use cookies and similar tracking technologies to enhance your experience on our website. Cookies help us analyze trends, track user movements, and gather demographic information.</p>
+
+    <!-- How We Use Your Information -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">HOW WE USE YOUR INFORMATION</h2>
+    <p>We use the information collected for the following purposes:</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">To Provide Services:</h3>
+    <p>We use your personal information to process class registrations, schedule lessons, and communicate with you about updates, promotions, or important information related to Zen Brazilian Jiu-Jitsu.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Payment Processing:</h3>
+    <p>Payment information is used solely for processing transactions and ensuring accurate billing through our third-party payment processors.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Marketing and Communication:</h3>
+    <p>We may use your email address and phone number to send you newsletters, promotional offers, or other marketing materials. You can opt out of these communications at any time by following the unsubscribe instructions in the email.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Website Improvement and Analytics:</h3>
+    <p>We use cookies and website usage data to improve our website's functionality and to analyze visitor trends for marketing purposes. This information helps us tailor content and advertisements to users.</p>
+
+    <!-- Data Sharing and Disclosure -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">DATA SHARING AND DISCLOSURE</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Service Providers:</h3>
+    <p>We may share your information with third-party service providers who assist in operating our website, processing payments, or sending communications. These service providers are contractually obligated to protect your information and only use it for the services they provide.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Legal Requirements:</h3>
+    <p>We may disclose your information if required by law or if we believe such action is necessary to comply with a legal obligation, protect our rights, investigate fraud, or respond to a government request.</p>
+
+    <h3 style="color:#ffffff;font-size:1rem;font-weight:700;margin:24px 0 8px;">Business Transfers:</h3>
+    <p>In the event of a merger, acquisition, or sale of assets, your personal information may be transferred as part of the business transaction. You will be notified via email and/or a prominent notice on our website of any change in ownership or uses of your personal information.</p>
+
+    <!-- Your Data Protection Rights -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">YOUR DATA PROTECTION RIGHTS</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+    <ul style="margin:16px 0 0 20px;padding:0;list-style:disc;">
+      <li style="margin-bottom:10px;"><strong style="color:#ffffff;">Access:</strong> You have the right to request a copy of the personal information we hold about you.</li>
+      <li style="margin-bottom:10px;"><strong style="color:#ffffff;">Correction:</strong> You can request that we correct any inaccuracies in your personal information.</li>
+      <li style="margin-bottom:10px;"><strong style="color:#ffffff;">Deletion:</strong> You may request that we delete your personal information, subject to certain exceptions.</li>
+      <li style="margin-bottom:10px;"><strong style="color:#ffffff;">Opt-Out:</strong> You can opt-out of marketing communications at any time by clicking the "unsubscribe" link in the emails we send you or contacting us directly.</li>
+    </ul>
+
+    <!-- Security -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">SECURITY OF YOUR INFORMATION</h2>
+    <p>We take the security of your personal information seriously. We implement industry-standard security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <!-- Third-Party Links -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">THIRD-PARTY LINKS</h2>
+    <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of these websites before providing any personal information.</p>
+
+    <!-- Advertising -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">ADVERTISING</h2>
+    <p>We use third-party advertising services, such as Meta (formerly Facebook) and Google Ads, to display ads that may be relevant to you. These services may collect information about your browsing behavior and interactions with ads. You can opt out of interest-based advertising through settings provided by these platforms.</p>
+    <ul style="margin:16px 0 16px 20px;padding:0;list-style:disc;">
+      <li style="margin-bottom:10px;"><strong style="color:#ffffff;">Meta Ads Preferences:</strong> <a href="https://www.facebook.com/ads/preferences/" target="_blank" rel="noopener noreferrer" style="color:#CC0000;text-decoration:underline;">Meta Ad Settings</a></li>
+      <li style="margin-bottom:10px;"><strong style="color:#ffffff;">Google Ads Preferences:</strong> <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" style="color:#CC0000;text-decoration:underline;">Google Ad Settings</a></li>
+    </ul>
+    <p>We comply with the advertising policies of Meta and Google, ensuring transparency and user consent for data collection and usage.</p>
+
+    <!-- Children's Privacy -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">CHILDREN'S PRIVACY</h2>
+    <p>Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it.</p>
+
+    <!-- Changes to This Policy -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">CHANGES TO THIS PRIVACY POLICY</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page, and the effective date will be updated accordingly. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+
+    <!-- Contact Us -->
+    <h2 style="font-family:var(--font-head);font-size:1.5rem;color:#CC0000;letter-spacing:0.05em;margin:48px 0 16px;">CONTACT US</h2>
+    <p>If you have any questions about this Privacy Policy or the information we collect, please contact us at: <a href="tel:+16108275929" style="color:#CC0000;text-decoration:none;">(610) 827-5929</a> or email us at: <a href="mailto:whsieh@zenjiujitsucoopersburg.com" style="color:#CC0000;text-decoration:none;">whsieh@zenjiujitsucoopersburg.com</a></p>
+    <p style="margin-top:24px;font-weight:600;color:#ffffff;">Zen Brazilian Jiu-Jitsu</p>
+
+  </div>
+</main>
+
+<!-- REVIEWS -->
+<section class="testimonials-section" aria-labelledby="reviews-heading">
+  <div class="container">
+    <h2 id="reviews-heading" class="text-center" data-aos="fade-up">What Our Members Say...</h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">Real Experiences, Real Results</p>
+
+    <div class="reviews-carousel-wrapper" id="reviewsCarouselWrapper" data-aos="fade-up" data-aos-delay="200">
+      <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous reviews">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <div class="reviews-carousel" id="reviewsCarousel">
+        <div class="reviews-track" id="reviewsTrack">
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Zen Brazilian Jiu-Jitsu is the place to train! I've never done any combat or contact sports before but coming to Zen has really helped me understand the basics and learn more as I keep going. The teachers are very knowledgeable and helpful. The people who train there are also very friendly. If you're like me and want to try out martial arts, I'd definitely recommend coming to Zen BJJ."</p>
+            <div class="reviewer-name">Jacob Wiesner</div>
+            <div class="reviewer-label">Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Been coming here for a few months, the amount of knowledge I've retained in that short time is a testament to Coach Wen and the program he put together. His gym is clean. He preaches safety first and is able to break moves down so everyone is able to understand the task at hand. Bonus, his judo classes are awesome. You cannot go wrong with Zen BJJ! Would give 6 stars if I could."</p>
+            <div class="reviewer-name">Harry Overly</div>
+            <div class="reviewer-label">Local Guide · Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"I was totally nervous about trying jiu-jitsu, but Wen and everyone at the gym is so welcoming for people of all levels of experience &amp; all ages. And my kids loved flipping me over! It was really fun!"</p>
+            <div class="reviewer-name">Stefanie Clark</div>
+            <div class="reviewer-label">Local Guide · Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Zen Brazilian Jiu-Jitsu is a fantastic place to train! Wen and his team of instructors are detail-oriented, goal-driven, and truly dedicated to their students' progress. With a flexible class schedule, friendly training partners, and a positive atmosphere, I highly recommend stopping in for a trial class!"</p>
+            <div class="reviewer-name">Will C</div>
+            <div class="reviewer-label">Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"We are so grateful for this community. We started my daughter there when they first opened up back in November of 2024 and I can't believe the progress she has made from then until now. It's incredible to watch her and the rest of the kids that consistently show up. She would go every day if she could. Coach Wen and the staff are phenomenal. I highly recommend this gym to any family!"</p>
+            <div class="reviewer-name">Katie Morris</div>
+            <div class="reviewer-label">Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Phenomenal gym. Several very experienced instructors who are both personable and diligent. Great facility, environment, and an abundance of experience in grappling. I highly recommend Zen to anyone just starting out or simply looking for a new place to train. See you on the mats!"</p>
+            <div class="reviewer-name">Damien Sanchez</div>
+            <div class="reviewer-label">Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"I've been to several BJJ gyms over the years, and as far as I can tell, Zen is a fantastic place to train. The people were super welcoming from day one (and there's a good number of women who frequently train there yay!) and the mats are nice and clean. They've got a variety of instructors who will teach old school moves, more modern techniques, wrestling, and even Judo to make for a well-rounded grappling experience. The schedule is flexible with mid-day classes and afternoon classes all week, so you're really getting your money's worth with an all-inclusive membership if you hit as many classes as possible. It's a relatively small gym, but they've got great competition at all levels."</p>
+            <div class="reviewer-name">Izzy Hoang</div>
+            <div class="reviewer-label">Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Zen Brazilian Jiu Jitsu is everything you could want in a martial arts school and more. Wen, the owner, along with the other instructors are incredibly knowledgeable and patient, offering personalized guidance whether you're a complete beginner or a seasoned practitioner. The facility is clean, well-organized, and has a great energy. They balance technical instruction with a focus on mindset and personal growth. It's not just about learning to roll — it's about building confidence, discipline, and resilience. If you're looking for a place to train that feels like family and pushes you to be your best, Zen BJJ is it. Highly recommend giving it a try — you won't regret it!"</p>
+            <div class="reviewer-name">Christopher Blowars</div>
+            <div class="reviewer-label">ZEN BJJ Instructor</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Zen Brazilian Jiu Jitsu is absolutely top-notch! From the moment you walk in, you're welcomed by an incredibly supportive and respectful community. The instructors are not only highly skilled but also excellent teachers — they break down techniques clearly and ensure everyone, from beginners to advanced practitioners, feels comfortable and challenged. The facility is always clean and well-maintained, creating the perfect environment for training. Whether you're looking to improve fitness, build confidence, or master the art of Jiu Jitsu, this is the place to be. Highly recommend Zen BJJ to anyone considering taking their first class or looking to take their game to the next level!"</p>
+            <div class="reviewer-name">Barrington Corey Baker</div>
+            <div class="reviewer-label">Local Guide · Google Review</div>
+            <div class="watermark" aria-hidden="true">BRAZILIAN JIU-JITSU</div>
+          </article>
+
+        </div><!-- /reviews-track -->
+      </div><!-- /reviews-carousel -->
+
+      <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next reviews">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div><!-- /reviews-carousel-wrapper -->
+
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Review navigation"></div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <a href="https://www.google.com/search?newwindow=ANbL-n6jtVjjmo40pLEKSWnHj_0fv2LIiQ:1776117030747&q=Zen+Brazilian+Jiu-Jitsu,+7001+PA-309,+Coopersburg,+PA+18036,+United+States&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXPxCbQCdAypytVNDpJ05wscndrPcM5QG6sQ3BqxLQsaULzF_dbfhcZn3fAzvhtK1FI_rAlTTEml113O00PALrPRSC0u4I9Mvt58v6vvNNKcwxQ9mQ%3D%3D&sa=X&ved=2ahUKEwjozcnF5-uTAxXKB9sEHUOBLYYQrrQLegQIMRAA&biw=1440&bih=812&dpr=2" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;background:#1f1f1f;border:1px solid #333;border-radius:8px;padding:12px 24px;color:#e0e0e0;font-size:0.88rem;transition:0.3s;" aria-label="See all Google reviews">
+        ⭐ See All Reviews on <strong>Google</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner" data-aos="fade-up" data-aos-offset="40">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="ZEN Brazilian Jiu-Jitsu Home">
+          <img src="Logos/Zen%20Logo%20White.webp" alt="ZEN Brazilian Jiu-Jitsu" class="footer-logo-img">
+        </a>
+        <p>A premier Gi &amp; No-Gi Jiu-Jitsu academy in Coopersburg, PA. Classes for all ages and skill levels in the Lehigh Valley.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/ZenBJJCoopersburg" class="social-circle" target="_blank" rel="noopener noreferrer" aria-label="ZEN BJJ on Facebook">
+            <svg viewBox="0 0 24 24" style="fill:white;width:20px;height:20px" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/zen_brazilian_jiujitsu/" class="social-circle" target="_blank" rel="noopener noreferrer" aria-label="ZEN BJJ on Instagram">
+            <svg viewBox="0 0 24 24" style="fill:none;stroke:white;stroke-width:2;width:20px;height:20px" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instructors.html">Instructors</a></li>
+          <li><a href="adult-bjj.html">Adult Jiu-Jitsu</a></li>
+          <li><a href="kids-bjj.html">Kids Jiu-Jitsu</a></li>
+          <li><a href="judo.html">Judo</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.24-1.24a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+16108275929">1 (610) 827-5929</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:whsieh@zenjiujitsucoopersburg.com">whsieh@zenjiujitsucoopersburg.com</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#CC0000;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <address style="font-style:normal;">7001 Route 309 North, Store #15<br>Coopersburg, PA 18036</address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>Copyright 2026 – ZEN Brazilian Jiu-Jitsu. All rights reserved.</p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="mobile-bar" aria-label="Mobile quick actions">
+  <a href="tel:+16108275929" class="call-btn" aria-label="Call ZEN BJJ at 610-827-5929">
+    <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:#CC0000;fill:none;stroke-width:2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.22a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.24-1.24a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Us
+  </a>
+  <div class="free-btn" id="mobileFreeCta" role="button" tabindex="0" aria-label="Try a free class">TRY FREE CLASS</div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/cursor.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    AOS.init({ duration: 700, once: true, offset: 60, easing: 'ease-out-cubic' });
+  }
+</script>
+</body>
+</html>
